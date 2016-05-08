@@ -1,0 +1,16 @@
+<h1>Edit Link</h1>
+
+<p>
+  <form action="<%= link_url(@link) %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label for="Title">Title</label>
+    <input type="text" name="link[title]" id="Title" value="<%= @link.title %>">
+    <br>
+    <label for="URL">URL</label>
+    <input type="text" name="link[url]" id="URL" value="<%= @link.url %>">
+
+    <input type="submit" value="Update Link">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  </form>
+</p>
